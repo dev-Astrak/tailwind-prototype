@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>InlineWind — Custom Inline Tailwind</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Inline<span>Wind</span></div>
+  <div class="tagline">utility classes → inline styles, zero CSS</div>
+</header>
+
+<main>
+
+  <!-- Playground -->
+  <div class="card" id="playground">
+    <div class="card-title">Live Playground</div>
+    <textarea id="classInput" rows="2" placeholder="e.g. bg-blue text-white p-4 rounded bold shadow">bg-blue text-white p-4 rounded bold shadow</textarea>
+    <div class="preview-wrap">
+      <span id="preview-el">Preview element</span>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-top:12px;">
+      <div class="applied-tags" id="applied-tags" style="margin-top:0; flex:1;"></div>
+      <button class="clear-btn" onclick="clearAll()" title="Remove all styles">✕ clear all</button>
+    </div>
+  </div>
+
+  <!-- Class reference -->
+  <div class="card">
+    <div class="card-title">Available Classes — click to add</div>
+    <div class="class-grid" id="class-grid"></div>
+  </div>
+
+  <!-- Quick demos -->
+  <div class="card" id="demos">
+    <div class="card-title">Quick Demo Elements</div>
+    <div class="demo-row" id="demo-row"></div>
+  </div>
+
+  <!-- Source -->
+  <div class="card" id="source-card">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+      <div class="card-title" style="margin-bottom:0">Engine Source — copy & use anywhere</div>
+      <button class="copy-btn" onclick="copySource()">copy</button>
+    </div>
+    <pre id="source-pre"></pre>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
